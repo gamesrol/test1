@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function get(url){
+                const main = document.getElementById("main")
+                fetch(url + ".html")
+                    .then(response => response.text())
+                    .then(data => main.innerHTML = data);
+            }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="get('1')">Get 1</button>
+        <button onclick="get('2')">Get 2</button>
+        <main id="main">
+            No soy ninguno
+        </main>
+    </body>
+</html>
